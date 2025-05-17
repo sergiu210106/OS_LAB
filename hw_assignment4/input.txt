@@ -1,0 +1,13 @@
+1apple
+2banana
+9zebra
+3carrot
+5dog
+1apricot
+3cucumber
+0orange
+7grape
+8kiwi
+2blueberry
+3avocado
+
