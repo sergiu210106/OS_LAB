@@ -15,6 +15,16 @@ int main() {
 }
 
 // file Handling
+    fopen(): Opens a file for reading, writing, appending, etc. You specify the mode ("r", "w", "a", "rb", "wb", etc.).
+    fclose(): Closes an open file, releasing system resources.
+    fread(): Reads a block of data from a file.
+    fwrite(): Writes a block of data to a file.
+    fprintf(): Writes formatted output to a file (like printf but to a file).
+    fscanf(): Reads formatted input from a file (like scanf but from a file).
+    getc(): Reads a single character from a file.
+    putc(): Writes a single character to a file.
+    fgets(): Reads a line of text from a file.
+    fputs(): Writes a string to a file.
 
     // reading
     #include <stdio.h>

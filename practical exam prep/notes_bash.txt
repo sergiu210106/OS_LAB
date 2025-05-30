@@ -8,6 +8,17 @@ ls -l /nonexistant 2> error.txt -> redirects the error output to error.txt
 ls | wc -l -> pipes the output of ls to wc -l to count the number of lines (corresponding
 to the number of files/directories)
 
+variables are treated as strings implicitly, you need $(()) for explicit integer evaluation
+
+1. Anchors in Regular Expressions
+
+What they do: Anchors are special characters in regular expressions that don't match actual characters but rather positions within a string or line of text. They "anchor" the match to a specific location.
+
+The specific anchors:
+    ^ (Caret): Matches the beginning of a line. So, ^abc will only match lines that start with "abc".
+    $ (Dollar sign): Matches the end of a line. xyz$ will only match lines that end with "xyz".
+    \< : Matches the beginning of a word. \<the will match "the" or "theatre" but not "breathe".
+    \> : Matches the end of a word. end\> will match "end" or "backend" but not "endure".
 
 // checking if a file exists
 #!/bin/bash
@@ -79,6 +90,8 @@ grep -i '\(.\*\[aeiouAEIOU].\*\)\{3\}' words.txt
 [0-9]{3}-[0-9]{3}-[0-9]{4} or \d{3}-\d{3}-\d{4}
 
 {} -> number of repetitions
+
+[^abc] -> matches every character except the ones in the brackets
 
 grep -ic "word" filename.txt
     -c counts lines

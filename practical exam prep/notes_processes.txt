@@ -36,6 +36,7 @@ int main() {
 	
 	if (pid == 0) {
 		printf("Child: Existing\n");
+		return 5;
 	} else if (pid > 0) {
 		int status;
 		wait(&status);
