@@ -1,0 +1,76 @@
+I.  UNIX Commands and Shell Scripting
+
+Basic UNIX Commands:
+Understand the syntax of UNIX commands: command [options] [values].
+Memorize essential commands for file system navigation: pwd, ls, cd, mkdir, cp, mv, rmdir.
+
+Know how to use command options (short and long) and arguments.
+Practice standard streams redirection and connecting commands with pipes (<, >, >>, |).
+Shell Scripting Fundamentals:
+Grasp the concept of a shell as an interface between the user and the OS kernel.
+Learn about different shell types (sh, csh, ksh, bash) with a focus on bash.
+Understand how to create and execute bash scripts: #!/bin/bash, permissions (chmod +x), and running scripts (./scriptname).
+Become comfortable with script comments (#) and variables (declaration, naming conventions, case sensitivity).
+Study special variables ($0, $1, ..., $#, $*, $@, $?, $$, $!) and their meanings.
+Shell Scripting - Advanced:
+Arithmetic expressions with expr (operators, numerical comparisons) and $((...)).
+
+Conditional statements (if, then, else, elif, fi) and loop structures (for, while, until, do, done).
+case statements (case ... in ... esac).
+Command substitution (``, $(...)).
+String manipulation and pattern matching in bash (including quoting, [[ ]], and =~ for regex).
+
+Know other commands like test, cut, find, shift, sleep, exit, and read.
+Regular Expressions:
+Understand the definition and purpose of regular expressions.
+Learn the meaning and usage of meta-characters: ., \, ^, $, |, ?, *, +, (), [], {}.
+
+Study character classes ([abc], [^abc], [a-z], [A-Z], [0-9], \d, \s, \w) and anchors (^, $, \<, \>)..
+
+Practice repetition operators (?, *, +, \{n\}, \{n,\}, \{,m\}, \{n,m\}).
+Tools:
+grep: Options (-c, -i, -v, -A, -B, -C, -e, -f) and usage for searching patterns in files.
+sed: Basic syntax and usage for text manipulation.
+awk: Basic syntax and usage for text processing.
+II. C Programming
+
+Data Types:
+Know the basic C data types (char, int, float, double) and their memory sizes and ranges.
+Understand the use of unsigned, short, and long modifiers.
+Keywords:
+Familiarize yourself with the list of reserved words in C.
+Constants:
+Understand how to define constants using #define and const.
+File Handling:
+Learn how to work with files in C using fopen, fclose, fread, fwrite, fseek, fprintf, fscanf, getc, putc, fgets, fputs.
+
+
+
+
+Command Line Arguments:
+Understand how to use argc and argv to handle command line arguments.
+Common Errors:
+Be aware of common compilation errors and warnings (syntax errors, missing libraries, etc.).
+Memory Leaks:
+Know how to detect memory leaks using valgrind.
+III.  UNIX Processes and IPC
+
+Processes:
+Understand the definition of a process and how to view them using ps.
+Process Creation:
+Study the fork() function: its purpose, how it works, and what it returns.
+Process Control:
+Learn about wait() and waitpid() for managing child process execution.
+Understand the concept of signals and the signal() function (basic idea).
+Pipes:
+Understand the concept of Inter-Process Communication (IPC) and pipes.
+Differentiate between internal and external (FIFO) pipes.
+Learn how to create and use internal pipes with the pipe() function (unistd.h, int p[2], p[0] for reading, p[1] for writing).
+Understand that pipe operations are similar to file I/O (read/write).
+Study Tips:
+
+Hands-on Practice: The most effective way to learn this material is to practice the commands and write your own shell and C programs. Use the examples in the provided files as a starting point.
+Review Examples: Carefully go through all the script and C program examples provided in the lab materials. Understand what each line of code does.
+Use the Manual: Get comfortable with using the man pages to look up command details and options.
+Focus on Key Concepts: Make sure you understand the core concepts behind each topic (e.g., how fork() works, what a regular expression is, how file descriptors are used with pipes).
+Practice Problem Solving: Try to solve problems that involve combining different commands and concepts. For example, "Write a script to find all files in a directory, sort them by size, and print the top 3 largest files."

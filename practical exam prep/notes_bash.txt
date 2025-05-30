@@ -1,0 +1,93 @@
+mkdir
+cd
+touch
+ls
+cp file1 file2 -> copies file1 to file2
+mv file subdir/ -> moves file in subdir
+ls -l /nonexistant 2> error.txt -> redirects the error output to error.txt
+ls | wc -l -> pipes the output of ls to wc -l to count the number of lines (corresponding
+to the number of files/directories)
+
+
+// checking if a file exists
+#!/bin/bash
+if [ -f "$1" ]; then
+    echo "File exists"
+else
+    echo "File doesn't exist"
+fi
+
+// reading and writing variables
+#!/bin/bash
+echo -n "Enter your name:"
+echo "Hello, $name!"
+
+// script name and arguments
+#!/bin/bash
+echo "Script name: $0"
+echo "Number of arguments: $#"
+echo "Arguments: $*"
+
+// working with numbers
+#!/bin/bash
+num1=$1
+num2=$2
+echo "Sum: $((num1 + num2))"
+echo "Difference: $((num1 - num2))"
+echo "Product: $((num1 * num2))"
+echo "Quotient: $((num1 / num2))"
+
+// for loop
+#!/bin/bash
+for i in $(seq 1 10); do
+    echo $i 
+done
+
+// checking if a number is even or odd
+#!/bin/bash
+echo -n "Enter a number:"
+read num
+if ((num % 2 == 0)); then
+    echo "Even"
+else
+    echo "Odd"
+fi
+
+// modulo
+#!/bin/bash
+case "$(uname -s)" in
+    Linux*) echo "Linux";;
+    Darwin*) echo "macOS";;
+    Windows*) echo "Windows";;
+    *) echo "Other OS";;
+esac
+
+// grep examples 
+grep "^a.*e$" words.txt
+    ^a -> lines starting with A
+    .* -> matches any characters
+    e$ -> lines ending with e
+
+grep -i '\(.\*\[aeiouAEIOU].\*\)\{3\}' words.txt
+    -i ignores case
+    [aeiouAEIOU] matches any vowel
+    (.\*\[aeiouAEIOU].\*\) -> matches <zero or more characters> <any vowel> <zero or more characters>
+    \{3\} matches the pattern 3 times
+
+[a-zA-Z0-9._%+-]+@[a-zA-Z0-9._]+\.[a-zA-Z]{2,}
+
+[0-9]{3}-[0-9]{3}-[0-9]{4} or \d{3}-\d{3}-\d{4}
+
+{} -> number of repetitions
+
+grep -ic "word" filename.txt
+    -c counts lines
+    -i ignores case
+
+sed 's/old/new/g' filename.txt
+
+awk -F',' '{print $1, $3}' filename.csv
+    -F',' sets the field separator to comma 
+    the first and third fields are printed
+
+    
